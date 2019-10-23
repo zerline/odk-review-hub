@@ -57,6 +57,7 @@ RUN conda env create -n notebook -f /tmp/environment.yml \
  && conda clean -pity \
  && jupyter lab clean
 
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 RUN jupyter lab build \
  && jupyter lab clean
 
